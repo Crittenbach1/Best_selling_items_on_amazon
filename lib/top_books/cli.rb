@@ -49,6 +49,8 @@ class TopBooks::CLI
            puts "more info on book 9..."
          when "10"
            puts "more info on book 10..."
+         else
+           puts "invalid please type list, exit or a book number"
         end
       end
    end
