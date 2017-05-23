@@ -8,18 +8,10 @@ class TopBooks::CLI
    end
 
    def list_books
-     puts "1. Hillbilly Elegy: A Memoir of a Family and Culture in Crisis - J.D.Vance - $16.79"
-     puts "2. Milk and Honey - Rupi Kaur - $8.99"
-     puts "3. The Whole30: The 30-Day Guide to Total Health and Food Freedom - Melissa Hartwig - $17.99"
-     puts "4. name - author - price"
-     puts "5. name - author - price"
-     puts "6. name - author - price"
-     puts "7. name - author - price"
-     puts "8. name - author - price"
-     puts "9. name - author - price"
-     puts "10. name - author - price"
+     @books = TopBooks::Book.today
+     puts @books
    end
-   
+
    def menu
      input = ""
      while input != "exit"
@@ -30,7 +22,7 @@ class TopBooks::CLI
            list_books
          when "1"
            puts "more info on book 1..."
-  
+
          when "2"
            puts "more info on book 2..."
          when "3"
@@ -58,6 +50,6 @@ class TopBooks::CLI
    def goodbye
      puts "See you tomorrow for tomorrow's top books!!!"
    end
-   
+
 
 end
