@@ -22,7 +22,6 @@ class TopBooks::CLI
            list_books
          when "1"
            puts "more info on book 1..."
-
          when "2"
            puts "more info on book 2..."
          when "3"
