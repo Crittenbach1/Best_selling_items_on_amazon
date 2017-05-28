@@ -27,7 +27,7 @@ class TopBooks::Book
 
   def initialize(number, new_scrape)
     booknum = TopBooks::BookScraper.new(number, new_scrape)
-    self.name = "name"
+    self.name = booknum.hash["name"]
     self.author = "author"
     self.price = "price"
     self.url = booknum.hash["url"]

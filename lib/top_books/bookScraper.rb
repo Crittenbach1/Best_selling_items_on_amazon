@@ -1,6 +1,6 @@
 class TopBooks::BookScraper
 
-    attr_accessor :scrape, :hash, :item
+    attr_accessor :scrape, :hash
 
     def initialize(number, scrape)
       @scrape = scrape[number.to_i - 1].css(".zg_itemWrapper")
@@ -9,9 +9,19 @@ class TopBooks::BookScraper
     end
 
     def scraper
-    info = @scrape.css("div.a-section.a-spacing-none.p13n-asin")
-    url = info.css("a.a-link-normal").attribute("href").value
+    scrape1 = @scrape.css("div.a-section.a-spacing-none.p13n-asin")
+    url = scrape1.css("a.a-link-normal").attribute("href").value
+
     @hash["url"] = "www.amazon.com#{url}"
+
+
+    scrape2 = scrape1.css("a.a-link-normal")
+    @hash["name"] = scrape2.css("div.p13n-sc-truncate.p13n-sc-truncated-hyphen.p13n-sc-line-clamp-1").text
+
+    
+
+
+
     end
 
 
