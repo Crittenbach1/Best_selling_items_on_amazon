@@ -18,19 +18,19 @@ class TopBooks::Book
 
     book1 = self.new("1", @new_scrape)
     book2 = self.new("2", @new_scrape)
-    
+
 
     puts "1. #{book1.name} - #{book1.author} - #{book1.price}"
     puts "2. #{book2.name} - #{book2.author} - #{book2.price}"
-    
+
   end
 
   def initialize(number, new_scrape)
     booknum = TopBooks::BookScraper.new(number, new_scrape)
-    self.name = booknum.scrape 
+    self.name = "name"
     self.author = "author"
     self.price = "price"
-    self.url = "url"
+    self.url = booknum.hash["url"]
   end
 
 end
