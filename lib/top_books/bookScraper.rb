@@ -14,13 +14,11 @@ class TopBooks::BookScraper
 
     @hash["url"] = "www.amazon.com#{url}"
 
-
     scrape2 = scrape1.css("a.a-link-normal")
     @hash["name"] = scrape2.css("div.p13n-sc-truncate.p13n-sc-truncated-hyphen.p13n-sc-line-clamp-1").text
 
-    
-
-
+    scrape3 = scrape1.css("div.a-row.a-size-small")
+    @hash["author"] = scrape3.css("a.a-size-small.a-link-child").text
 
     end
 
