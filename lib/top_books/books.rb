@@ -29,7 +29,7 @@ class TopBooks::Book
     booknum = TopBooks::BookScraper.new(number, new_scrape)
     self.name = booknum.hash["name"]
     self.author = booknum.hash["author"]
-    self.price = "price"
+    self.price = booknum.hash["price"]
     self.url = booknum.hash["url"]
   end
 
