@@ -9,18 +9,18 @@ class TopBooks::BookScraper
     end
 
     def scraper
-    scrape1 = @scrape.css("div.a-section.a-spacing-none.p13n-asin")
-    url = scrape1.css("a.a-link-normal").attribute("href").value
-    @hash["url"] = "www.amazon.com#{url}"
+      scrape1 = @scrape.css("div.a-section.a-spacing-none.p13n-asin")
+      url = scrape1.css("a.a-link-normal").attribute("href").value
+      @hash["url"] = "www.amazon.com#{url}"
 
-    scrape2 = scrape1.css("a.a-link-normal")
-    @hash["name"] = scrape2.css("div.p13n-sc-truncate.p13n-sc-truncated-hyphen.p13n-sc-line-clamp-1").text.strip
+      scrape2 = scrape1.css("a.a-link-normal")
+      @hash["name"] = scrape2.css("div.p13n-sc-truncate.p13n-sc-truncated-hyphen.p13n-sc-line-clamp-1").text.strip
 
-    scrape3 = scrape1.css("div.a-row.a-size-small")
-    @hash["author"] = scrape3.css("a.a-size-small.a-link-child").text
+      scrape3 = scrape1.css("div.a-row.a-size-small")
+      @hash["author"] = scrape3.css("a.a-size-small.a-link-child").text
 
-    scrape4 = scrape1.css("span.p13n-sc-price")
-    @hash["price"] = scrape4.text
+      scrape4 = scrape1.css("span.p13n-sc-price")
+      @hash["price"] = scrape4.text
     end
 
 

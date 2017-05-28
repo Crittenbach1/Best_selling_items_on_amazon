@@ -18,10 +18,27 @@ class TopBooks::Book
 
     book1 = self.new("1", @new_scrape)
     book2 = self.new("2", @new_scrape)
+    book3 = self.new("3", @new_scrape)
+    book4 = self.new("4", @new_scrape)
+    book5 = self.new("5", @new_scrape)
+    book6 = self.new("6", @new_scrape)
+    book7 = self.new("7", @new_scrape)
+    book8 = self.new("8", @new_scrape)
+    book9 = self.new("9", @new_scrape)
+    book10 = self.new("10", @new_scrape)
 
 
     puts "1. #{book1.name} - #{book1.author} - #{book1.price}"
     puts "2. #{book2.name} - #{book2.author} - #{book2.price}"
+    puts "3. #{book3.name} - #{book3.author} - #{book3.price}"
+    puts "4. #{book4.name} - #{book4.author} - #{book4.price}"
+    puts "5. #{book5.name} - #{book5.author} - #{book5.price}"
+    puts "6. #{book6.name} - #{book6.author} - #{book6.price}"
+    puts "7. #{book7.name} - #{book7.author} - #{book7.price}"
+    puts "8. #{book8.name} - #{book8.author} - #{book8.price}"
+    puts "9. #{book9.name} - #{book9.author} - #{book9.price}"
+    puts "10. #{book10.name} - #{book10.author} - #{book10.price}"
+
 
   end
 
