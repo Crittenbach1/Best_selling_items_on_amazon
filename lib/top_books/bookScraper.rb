@@ -11,7 +11,7 @@ class TopBooks::BookScraper
     def scraper
       scrape1 = @scrape.css("div.a-section.a-spacing-none.p13n-asin")
       url = scrape1.css("a.a-link-normal").attribute("href").value
-      @hash["url"] = "www.amazon.com#{url}"
+      @hash["url"] = "https://www.amazon.com#{url}"
 
       scrape2 = scrape1.css("a.a-link-normal")
       @hash["name"] = scrape2.css("div.p13n-sc-truncate.p13n-sc-truncated-hyphen.p13n-sc-line-clamp-1").text.strip
@@ -22,7 +22,6 @@ class TopBooks::BookScraper
       scrape4 = scrape1.css("span.p13n-sc-price")
       @hash["price"] = scrape4.text
     end
-
 
 
 end

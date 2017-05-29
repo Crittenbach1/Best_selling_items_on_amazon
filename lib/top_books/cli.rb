@@ -1,3 +1,4 @@
+
 class TopBooks::CLI
 
    def call
@@ -21,7 +22,9 @@ class TopBooks::CLI
          when "list"
            list_books
          when "1"
-           puts "more info on book 1..."
+           book = TopBooks::Book.all
+           url = book[input.to_i - 1].url
+           TopBooks::More.more(url)
          when "2"
            puts "more info on book 2..."
          when "3"

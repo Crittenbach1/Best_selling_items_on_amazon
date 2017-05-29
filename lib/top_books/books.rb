@@ -28,7 +28,7 @@ class TopBooks::Book
     book10 = self.new("10", @new_scrape)
 
 
-    puts "1. #{book1.name} - #{book1.author} - #{book1.price}"
+    puts "1. #{book1.url} - #{book1.author} - #{book1.price}"
     puts "2. #{book2.name} - #{book2.author} - #{book2.price}"
     puts "3. #{book3.name} - #{book3.author} - #{book3.price}"
     puts "4. #{book4.name} - #{book4.author} - #{book4.price}"
@@ -48,6 +48,13 @@ class TopBooks::Book
     self.author = booknum.hash["author"]
     self.price = booknum.hash["price"]
     self.url = booknum.hash["url"]
+    @@all << self
   end
-
+  
+  @@all = []
+  
+  def self.all
+    @@all
+  end
+  
 end
