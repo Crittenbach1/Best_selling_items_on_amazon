@@ -9,7 +9,7 @@ class TopBooks::AmazonScraper
      end
 
     def scraper
-        html = Nokogiri::HTML(open('https://www.amazon.com/Best-Sellers-Appliances/zgbs/appliances/ref=zg_bs_nav_0'))
+        html = Nokogiri::HTML(open('https://www.amazon.com/best-sellers-music-albums/zgbs/music/ref=zg_bs_nav_0'))
 
         bestSellers = []
 
