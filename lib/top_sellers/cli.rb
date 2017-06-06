@@ -7,8 +7,6 @@ class TopBooks::CLI
    end
 
    def list_categories
-      
-   end
 
-   
+   end
 end

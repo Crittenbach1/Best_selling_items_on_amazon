@@ -12,23 +12,47 @@
 website: https://www.amazon.com/gp/bestsellers/2017/books/ref=zg_bs_tab_t_bsar
 
 
-- A command line interface for viewing current top selling books of 2017 on amazon and their info
+- A command line interface for viewing current top selling catergories on amazon
 
-User types top-books
+User types top-sellers
 
-Show list of top 10 books:
+Show list of top 37 categories:
 
-1. Hillbilly Elegy: A Memoir of a Family and Culture in Crisis - J.D.Vance - $16.79
-2. Milk and Honey
-3. Thirteen Reasons Why
-4. The Whole30: The 30-Day Guide to Total Health and Food
-5. The Shack: Where Tragedy Confronts Eternity
-6. A Man Called Ove: A Novel
-7. First 100 Words
-8. The Handmaid's Tale
-9. Oh, The Places You'll Go!
-10. 1984
+1. Amazon Launchpad
+2. Appliances
+3. Apps & Games
+4. Arts, Crafts & Sewing
+5. Automotive
+6. Baby
+7. Beauty & Personal Care
+8. Books
+9. CDs & Vinyl
+10. Camera & Photo
+11. Cell Phones & Accessories
+12. Clothing, Shoes & Jewelry
+13. Collectible Coins
+14. Computers & Accessories
+15. Digital Music
+16. Electronics
+17. Entertainment Collectibles
+18. Gift Cards
+19. Grocery & Gourmet Food
+20. Health & Household
+21. Home & Kitchen
+22. Industrial & Scientific
+23. Kindle Store
+24. Kitchen & Dining
+25. Magazine Subscriptions
+26. Movies & TV
+27. Musical Instruments
+28. Office Products
+30. Prime Pantry
+31. Software
+32. Sports & Outdoors
+33. Sports Collectibles
+34. Tools & Home Improvement
+35. Toys & Games
+36. Video Games
+37. Pet Supplies
 
-Select number to see more info on Book and Author
-
-1
+Shows Top sellers for picked category
