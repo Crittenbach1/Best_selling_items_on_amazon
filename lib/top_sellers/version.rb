@@ -1,3 +1,3 @@
-module TopBooks
+module TopSellers
   VERSION = "0.1.0"
 end
