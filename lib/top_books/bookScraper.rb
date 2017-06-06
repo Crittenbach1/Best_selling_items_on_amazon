@@ -1,3 +1,5 @@
+require 'nokogiri'
+require 'open-uri'
 class TopBooks::BookScraper
 
     attr_accessor :scrape, :hash
@@ -10,14 +12,10 @@ class TopBooks::BookScraper
 
     def scraper
       scrape1 = @scrape.css("div.a-section.a-spacing-none.p13n-asin")
-      url = scrape1.css("a.a-link-normal").attribute("href").value
-      @hash["url"] = "https://www.amazon.com#{url}"
-
       scrape2 = scrape1.css("a.a-link-normal")
-      @hash["name"] = scrape2.css("div.p13n-sc-truncate.p13n-sc-truncated-hyphen.p13n-sc-line-clamp-1").text.strip
+      scrape3 = scrape2.css("div.a-section.a-spacing-mini")
 
-      scrape3 = scrape1.css("div.a-row.a-size-small")
-      @hash["author"] = scrape3.css("a.a-size-small.a-link-child").text
+      @hash["name"] = scrape3.css("img").attribute("alt").value
 
       scrape4 = scrape1.css("span.p13n-sc-price")
       @hash["price"] = scrape4.text

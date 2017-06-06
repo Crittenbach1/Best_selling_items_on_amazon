@@ -26,18 +26,38 @@ class TopBooks::Book
     book8 = self.new("8", @new_scrape)
     book9 = self.new("9", @new_scrape)
     book10 = self.new("10", @new_scrape)
+    book11 = self.new("11", @new_scrape)
+    book12 = self.new("12", @new_scrape)
+    book13 = self.new("13", @new_scrape)
+    book14 = self.new("14", @new_scrape)
+    book15 = self.new("15", @new_scrape)
+    book16 = self.new("16", @new_scrape)
+    book17 = self.new("17", @new_scrape)
+    book18 = self.new("18", @new_scrape)
+    book19 = self.new("19", @new_scrape)
+    book20 = self.new("20", @new_scrape)
 
 
-    puts "1. #{book1.url} - #{book1.author} - #{book1.price}"
-    puts "2. #{book2.name} - #{book2.author} - #{book2.price}"
-    puts "3. #{book3.name} - #{book3.author} - #{book3.price}"
-    puts "4. #{book4.name} - #{book4.author} - #{book4.price}"
-    puts "5. #{book5.name} - #{book5.author} - #{book5.price}"
-    puts "6. #{book6.name} - #{book6.author} - #{book6.price}"
-    puts "7. #{book7.name} - #{book7.author} - #{book7.price}"
-    puts "8. #{book8.name} - #{book8.author} - #{book8.price}"
-    puts "9. #{book9.name} - #{book9.author} - #{book9.price}"
-    puts "10. #{book10.name} - #{book10.author} - #{book10.price}"
+    puts "1. #{book1.name} - #{book1.price}"
+    puts "2. #{book2.name} - #{book2.price}"
+    puts "3. #{book3.name} - #{book3.price}"
+    puts "4. #{book4.name} - #{book4.price}"
+    puts "5. #{book5.name} - #{book5.price}"
+    puts "6. #{book6.name} - #{book6.price}"
+    puts "7. #{book7.name} - #{book7.price}"
+    puts "8. #{book8.name} - #{book8.price}"
+    puts "9. #{book9.name} - #{book9.price}"
+    puts "10. #{book10.name} - #{book10.price}"
+    puts "11. #{book11.name} - #{book11.price}"
+    puts "12. #{book12.name} - #{book12.price}"
+    puts "13. #{book13.name} - #{book13.price}"
+    puts "14. #{book14.name} - #{book14.price}"
+    puts "15. #{book15.name} - #{book15.price}"
+    puts "16. #{book16.name} - #{book16.price}"
+    puts "17. #{book17.name} - #{book17.price}"
+    puts "18. #{book18.name} - #{book18.price}"
+    puts "19. #{book19.name} - #{book19.price}"
+    puts "20. #{book20.name} - #{book20.price}"
 
 
   end
@@ -47,14 +67,13 @@ class TopBooks::Book
     self.name = booknum.hash["name"]
     self.author = booknum.hash["author"]
     self.price = booknum.hash["price"]
-    self.url = booknum.hash["url"]
     @@all << self
   end
-  
+
   @@all = []
-  
+
   def self.all
     @@all
   end
-  
+
 end
