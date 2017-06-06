@@ -4,12 +4,12 @@ require 'open-uri'
 class TopBooks::AmazonScraper
      attr_accessor :scrape
 
-     def initialize
-       @scrape = self.scraper
+     def initialize(url)
+       @scrape = self.scraper(url)
      end
 
-    def scraper
-        html = Nokogiri::HTML(open('https://www.amazon.com/best-sellers-music-albums/zgbs/music/ref=zg_bs_nav_0'))
+    def scraper(url)
+        html = Nokogiri::HTML(open(url))
 
         bestSellers = []
 
