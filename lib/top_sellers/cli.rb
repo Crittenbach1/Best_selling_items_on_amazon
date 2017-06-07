@@ -18,9 +18,12 @@ class TopSellers::CLI
       until input == "exit"
         input = gets.strip
         if input.to_i >= 1 && input.to_i <= 37 then
-        puts "hello"
+
+        category = @amazon.scrape[input.to_i][1]
+        TopSellers::Department_Best_Sellers.scrape(category)
         puts "Pick a category number to view Top Sellers or type exit."
-        #TopSellers::Department.scrape(input)
+
+        #  TopSellers::Department_Best_Sellers.scrape(amazon)
         else
         puts "Invalid input - Pick a category number to view Top Sellers or type exit."
         end
