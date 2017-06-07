@@ -1,14 +1,14 @@
 require 'nokogiri'
 require 'open-uri'
 class TopSellers::Department_Best_Sellers
-  attr_accessor :scrape, :all
+  attr_accessor :all_items
 
-  def initialize(url)
-     @scrape = self.new_scrape(url)
+  def initialize
+
   end
 
-
-  def new_scrape(url)
+  def self.new_scrape(url)
+    new_scrape = self.new
     html = Nokogiri::HTML(open(url))
     all = []
       html.css('div.zg_itemImmersion').each do |item|
@@ -27,7 +27,7 @@ class TopSellers::Department_Best_Sellers
          index["price"] = scrape4.text
          @all_items << index
       end
-    @all_items
+     @all_items
   end
 
 end

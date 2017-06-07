@@ -20,10 +20,12 @@ class TopSellers::CLI
         if input.to_i >= 1 && input.to_i <= 37 then
 
         category = @amazon.scrape[input.to_i][1]
-          top = TopSellers::Department_Best_Sellers.new(category)
+          item_array = TopSellers::Department_Best_Sellers.new_scrape(category)
+          puts @amazon.scrape[input.to_i][0]
+          puts " "
+          TopSellers::BestSeller.print_items(item_array)
+          #TopSellers::BestSeller.print_items(item_array)
         puts "Pick a category number to view Top Sellers or type exit."
-
-        #  TopSellers::Department_Best_Sellers.scrape(amazon)
         else
         puts "Invalid input - Pick a category number to view Top Sellers or type exit."
         end
