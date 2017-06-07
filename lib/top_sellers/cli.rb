@@ -8,7 +8,8 @@ class TopSellers::CLI
 
    def list_categories
      puts "Amazon Departments:"
-     TopSellers::Departments.scrape
+     amazon = TopSellers::Departments.new
+     amazon.list_departments
    end
 
 end
