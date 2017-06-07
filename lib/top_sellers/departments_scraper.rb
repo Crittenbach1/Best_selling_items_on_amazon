@@ -1,7 +1,7 @@
 require 'nokogiri'
 require 'open-uri'
 class TopSellers::Departments
-      attr_accessor :departments
+      attr_accessor :departments, :scrape
 
       def scrape
         folder = {}
@@ -13,20 +13,20 @@ class TopSellers::Departments
               folder[i][1] = cat.css("a").attribute("href").value
               i += 1
             end
-        puts folder
+        return folder
       end
 
       def list_departments
-        puts @departments[1][0]
+         all = self.scrape
+         i = 1
+         until i > 37
+           puts "#{i}. #{all[i][0]}"
+           i += 1
+         end
       end
 
-
-
     def initialize
-      @departments = self.scrape
-
+     @departments = self.list_departments
     end
-
-
 
 end
