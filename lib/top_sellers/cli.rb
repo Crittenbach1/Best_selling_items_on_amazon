@@ -9,7 +9,7 @@ class TopSellers::CLI
    def list_categories
      puts "Amazon Departments:"
      amazon = TopSellers::Departments.new
-     amazon.list_departments
+
    end
 
 end
