@@ -13,14 +13,14 @@ class TopSellers::Departments
               folder[i][1] = cat.css("a").attribute("href").value
               i += 1
             end
-        return folder
+       @scrape = folder
       end
 
       def list_departments
-         all = self.scrape
+        self.scrape
          i = 1
          until i > 37
-           puts "#{i}. #{all[i][0]}"
+           puts "#{i}. #{@scrape[i][0]}"
            i += 1
          end
       end
