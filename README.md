@@ -1,15 +1,13 @@
-# TopBooks
+# TopSellers
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/top_books`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+   This gem scrapes the name and price of the top 20 best selling items for each department on Amazon.com.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'top_books'
+gem 'top_sellers'
 ```
 
 And then execute:
@@ -18,11 +16,11 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install top_books
+    $ gem install Best_selling_items_on_amazon
 
 ## Usage
 
-TODO: Write usage instructions here
+   Enter the number of the Amazon Department to view the current top 20 best selling items and their prices.
 
 ## Development
 
@@ -32,10 +30,9 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/'crittenbach-42490'/top_books. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/'crittenbach-42490'/Best_selling_items_on_amazon. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-
